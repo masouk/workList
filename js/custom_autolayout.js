@@ -89,7 +89,7 @@ readWebData = (function(){
 				}
 				allContent += _c;
 			})
-				$(".container .row:last").append(allContent);
+				$(".container > .row:last").append(allContent);
 			}
 			
 		})

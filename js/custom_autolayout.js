@@ -97,7 +97,7 @@ readWebData = (function(){
 	var _content = '<div class="col-md-4 portfolio-item">'+
 				'<a href="[@URL@]" target="_blank">'+
 					'<div class="img-overlay">'+
-						'<img class="img-responsive lazy" data-original="[@IMAGE@]" alt="[@NAME@]">'+
+						'<img class="img-responsive lazy" data-original="[@IMAGE@]" src="[@IMAGE@]" alt="[@NAME@]">'+
 					'</div>'+
 				'</a>'+
 				'<h3>'+

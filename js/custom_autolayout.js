@@ -84,7 +84,6 @@ readWebData = (function(){
 				_c = _c.replace(regex,"");
 				
 				if(key%3 == 2 || dataCount == key+1){
-				alert(val.name);
 					outline = '</div>';
 					_c = _c + outline;
 				}
@@ -105,16 +104,16 @@ readWebData = (function(){
 					'<a href="[@URL@]" target="_blank">[@NAME@]</a>'+
 				'</h3>'+
 				'<p>'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
-					'[@TYPE@]'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
+					'[@TYPE@]&nbsp;'+
 				'</p>'+
 			'</div>';
 	// the public API interface

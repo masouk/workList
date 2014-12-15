@@ -43,7 +43,7 @@ readWebData = (function(){
 					var  _t;
 					switch(val2){
 						case "會員":
-							_t = '<span class="label label-primary">會員</span>';
+							_t = '<span class="label label-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 會員</span>';
 						break;
 						case "商城":
 							_t = '<span class="label label-success">商城</span>';

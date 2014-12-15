@@ -14,6 +14,7 @@ readWebData = (function(){
 			timeout:1000*10,
 			success:function(data){
 			var dataCount = data.data.length;
+			var allContent = "";
 			$.map(data.data,function(val,key){
 				var _c = _content;
 				var regex;
@@ -87,9 +88,9 @@ readWebData = (function(){
 					outline = '</div>';
 					_c = _c + outline;
 				}
-				$(".container").append(_c);
+				allContent += _c;
 			})
-				
+				$(".container .row:last").append(allContent);
 			}
 			
 		})

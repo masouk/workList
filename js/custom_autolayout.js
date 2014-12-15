@@ -46,28 +46,25 @@ readWebData = (function(){
 							_t = '<span class="label label-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 會員</span>';
 						break;
 						case "商城":
-							_t = '<span class="label label-success">商城</span>';
+							_t = '<span class="label label-success"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 商城</span>';
 						break;
 						case "金流":
-							_t = '<span class="label label-warning">金流</span>';
+							_t = '<span class="label label-warning"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 金流</span>';
 						break;
 						case "管理後台":
-							_t = '<span class="label label-danger">管理後台</span>';
+							_t = '<span class="label label-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 管理後台</span>';
 						break;
 						case "形象網站":
-							_t = '<span class="label label-default">形象網站</span>';
+							_t = '<span class="label label-default"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> 形象網站</span>';
 						break;
 						case "系統":
-							_t = '<span class="label label-info">系統</span>';
+							_t = '<span class="label label-info"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> 系統</span>';
 						break;
 						case "活動網站":
-							_t = '<span class="label label-fmactivity">活動網站</span>';
-						break;
-						case "系統":
-							_t = '<span class="label label-info">系統</span>';
+							_t = '<span class="label label-fmactivity"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> 活動網站</span>';
 						break;
 						case "手機":
-							_t = '<span class="label label-fmmobile">手機</span>';
+							_t = '<span class="label label-fmmobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 手機</span>';
 						break;
 						case "連結已移除":
 							_t = '<span class="glyphicon glyphicon glyphicon-link" aria-hidden="true" style="color:#f00">連結已移除</span>';

@@ -19,17 +19,17 @@
     <link href="images/favicon_1.ico" rel="icon" type="image/x-icon">
     <title>masouk 開發專案</title>
 
-	<!--material CSS!-->
-	<link href="./css/material_package/oa-ripple.css" rel="stylesheet" type="text/css">
-	<link href="./css/material_package/oa-jelly-checkbox.css" rel="stylesheet" type="text/css">
-	<link href="./css/material_package/oa-jelly-select.css" rel="stylesheet" type="text/css">
-	<link href="./css/material_package/index.css" rel="stylesheet" type="text/css">
-	
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/3-col-portfolio.css" rel="stylesheet">
+	
+	<!--material CSS!-->
+	<link href="./css/material_package/oa-ripple.css" rel="stylesheet" type="text/css">
+	<link href="./css/material_package/oa-jelly-checkbox.css" rel="stylesheet" type="text/css">
+	<link href="./css/material_package/oa-jelly-select.css" rel="stylesheet" type="text/css">
+	<link href="./css/material_package/index.css" rel="stylesheet" type="text/css">
 	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -78,10 +78,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
 			<div style="float:right;margin-top:5px">
-				<select class="oa-select yellow-dpd">
-					<option value="1">English</option>
-					<option value="2" selected="selected">繁體中文(預設)</option>
-				</select>
+				
 			</div>
             <div class="navbar-header">
                 <a class="navbar-brand 3dtext" href="#" id="scroll-to-top">masouk</a>
@@ -93,6 +90,10 @@
     <!-- Page Content -->
     <div class="container">
 		<div class="row">
+		<select class="oa-select yellow-dpd">
+					<option value="1">English</option>
+					<option value="2" selected="selected">繁體中文(預設)</option>
+				</select>
 			<div class="oa-jelly-checkbox blue-ckb"><input type="checkbox" id="blue-ckb-1" checked><span class="ckb-check"></span> <label for="blue-ckb-1">會員</label></div>
 			<div class="oa-jelly-checkbox green-ckb"><input type="checkbox" id="green-ckb-1" checked><span class="ckb-check"></span> <label for="green-ckb-1">商城</label></div>
 			<div class="oa-jelly-checkbox yellow-ckb"><input type="checkbox" id="yellow-ckb-1" checked><span class="ckb-check"></span> <label for="yellow-ckb-1">金流</label></div>

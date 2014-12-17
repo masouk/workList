@@ -27,9 +27,8 @@ readWebData = (function(){
 				})
 			})
 			
-			var clearRepeat = $.unique(hasAD);
-			console.log(hasAD);
-			console.log(clearRepeat);
+			var clearRepeat = _uniqueAndSort(hasAD);
+			
 			$.map(clearRepeat,function(val,key){
 				temp.push(data.data[val]);
 			})
@@ -144,6 +143,31 @@ readWebData = (function(){
 				'</p>'+
 			'</div>';
 	// the public API interface
+	var _uniqueAndSort = function(data){
+		    var unique = []
+		    var data_count = []
+		    var inverse = []
+		   
+		    $.each(data,function(k,v){
+		        var pos = $.inArray(v,unique)
+		        if( pos == -1){
+		            unique.push(v);
+		            data_count.push(1);
+		        }else{
+		            data_count[pos]+=1;
+		        }
+		    })
+
+		    $.each(unique,function(k,v){
+		        inverse[v] = data_count[k];
+		    })
+		   
+		    unique.sort(
+		        function(a,b){
+		            return inverse[b]-inverse[a]
+		        }
+		    )
+	}
 	return {
 		initialize: function(condition){
 			// initialization

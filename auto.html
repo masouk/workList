@@ -281,8 +281,11 @@
 			})
 			
 			$("input[type=checkbox]").on("click",function(){
-				
-				readWebData.initialize($("input[type=checkbox]:checked").get())
+				var ck = [];
+				$("input[type=checkbox]:checked").each(function(){
+					ck.push($(this).val());
+				})
+				readWebData.initialize(ck)
 				
 			})
 			

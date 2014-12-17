@@ -28,7 +28,8 @@ readWebData = (function(){
 			})
 			
 			var clearRepeat = $.unique(hasAD);
-			
+			console.log(hasAD);
+			console.log(clearRepeat);
 			$.map(clearRepeat,function(val,key){
 				temp.push(data.data[val]);
 			})

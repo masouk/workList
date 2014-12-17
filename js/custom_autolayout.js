@@ -42,7 +42,7 @@ readWebData = (function(){
 				var outline;
 	
 					if(key%3 == 0){
-						outline = '<div class="row">';
+						outline = '<div class="row main-content">';
 						_c = outline + _c;
 					}
 					
@@ -114,6 +114,7 @@ readWebData = (function(){
 				allContent += _c;
 
 			})
+				$(".main-content").remove();
 				$(".container > .row:last").append(allContent);
 			}
 			
@@ -172,7 +173,6 @@ readWebData = (function(){
 	return {
 		initialize: function(condition){
 			// initialization
-			console.log(condition);
 			_list(condition);
 		}
 	};

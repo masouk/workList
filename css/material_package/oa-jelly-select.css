@@ -91,7 +91,7 @@
   text-align: center;
   top: 1px;
   right: 12px;
-  content: "?";
+  content: "▾";
   font-size: 30px;
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);

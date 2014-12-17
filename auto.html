@@ -280,7 +280,8 @@
 				}
 			})
 			
-			$("body").on(".ckb-check","click",function(){
+			$("body").delegate("input[type=checkbox]","click",function(){
+                            
 				var ck = [];
 				$("input[type=checkbox]:checked").each(function(){
 					ck.push($(this).val());

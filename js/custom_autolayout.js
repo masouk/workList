@@ -167,6 +167,7 @@ readWebData = (function(){
 		            return inverse[b]-inverse[a]
 		        }
 		    )
+		    return unique;
 	}
 	return {
 		initialize: function(condition){

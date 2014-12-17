@@ -172,6 +172,7 @@ readWebData = (function(){
 	return {
 		initialize: function(condition){
 			// initialization
+			console.log(condition);
 			_list(condition);
 		}
 	};

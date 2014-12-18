@@ -6,7 +6,7 @@ readWebData = (function(){
 	
 	// 這行可以增進效能
 	var $ = window.jQuery;
-	var _list = function(condition){
+	var _list = function(condition,lang){
 		$.ajax({
 			url:"data2.json",
 			dataType:"json",
@@ -68,31 +68,31 @@ readWebData = (function(){
 						var  _t;
 						switch(val2){
 							case "會員":
-								_t = '<span class="label label-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 會員</span>';
+								_t = '<span class="label label-primary"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="name_tw">會員</span><span class="name_en">Member</span></span>';
 							break;
 							case "商城":
-								_t = '<span class="label label-success"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 商城</span>';
+								_t = '<span class="label label-success"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> <span class="name_tw">商城</span><span class="name_en">Shop</span></span>';
 							break;
 							case "金流":
-								_t = '<span class="label label-warning"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> 金流</span>';
+								_t = '<span class="label label-warning"><span class="glyphicon glyphicon-usd" aria-hidden="true"></span> <span class="name_tw">金流</span><span class="name_en">Cash</span></span>';
 							break;
 							case "管理後台":
-								_t = '<span class="label label-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 管理後台</span>';
+								_t = '<span class="label label-danger"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> <span class="name_tw">管理後台</span><span class="name_en">Back-End</span></span>';
 							break;
 							case "形象網站":
-								_t = '<span class="label label-default"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> 形象網站</span>';
+								_t = '<span class="label label-default"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span> <span class="name_tw">形象網站</span><span class="name_en">Imagine</span></span>';
 							break;
 							case "系統":
-								_t = '<span class="label label-info"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> 系統</span>';
+								_t = '<span class="label label-info"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> <span class="name_tw">系統</span><span class="name_en">System</span></span>';
 							break;
 							case "活動網站":
-								_t = '<span class="label label-fmactivity"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> 活動網站</span>';
+								_t = '<span class="label label-fmactivity"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> <span class="name_tw">活動網站</span><span class="name_en">Campaign</span></span>';
 							break;
 							case "手機":
-								_t = '<span class="label label-fmmobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 手機</span>';
+								_t = '<span class="label label-fmmobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> <span class="name_tw">手機</span><span class="name_en">Mobile</span></span>';
 							break;
 							case "連結已移除":
-								_t = '<span class="glyphicon glyphicon glyphicon-link" aria-hidden="true" style="color:#f00">連結已移除</span>';
+								_t = '<span class="glyphicon glyphicon glyphicon-link" aria-hidden="true" style="color:#f00"><span class="name_tw">連結已移除</span><span class="name_en">unlink</span></span>';
 							break;
 							default:
 								_t = "標籤為定義";
@@ -116,10 +116,29 @@ readWebData = (function(){
 			})
 				$(".main-content").remove();
 				$(".container > .row:last").append(allContent);
+				_switchLang(lang);//語系切換
 			}
 			
 		})
-	}// end _setupToLikeButton
+	}// end 
+	//語系切換
+	var _switchLang = function(lang){
+		
+		switch(lang){
+			case "en": // EN
+				$(".name_tw").hide();
+				$(".name_en").show();
+				$('[data-toggle=popover]').attr("data-content","checked more than one");
+			break;
+			case "tw": //TW
+				$(".name_tw").show();
+				$(".name_en").hide();
+				$('[data-toggle=popover]').attr("data-content","至少選擇一個");
+			break;
+		}
+								
+		
+	}//語系切換 END
 	var _content = '<div class="col-md-4 portfolio-item">'+
 				'<a href="[@URL@]" target="_blank">'+
 					'<div class="img-overlay">'+
@@ -171,9 +190,12 @@ readWebData = (function(){
 		    return unique;
 	}
 	return {
-		initialize: function(condition){
+		initialize: function(condition,lang){
 			// initialization
-			_list(condition);
+			_list(condition,lang);
+		},
+		switchLang:function(lang){
+			_switchLang(lang);
 		}
 	};
 	

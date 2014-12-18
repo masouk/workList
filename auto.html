@@ -102,19 +102,21 @@
     <!-- Page Content -->
     <div class="container">
 		<div class="row">
-			<div class="oa-jelly-checkbox blue-ckb"><input type="checkbox" id="blue-ckb-1" value="會員" checked><span class="ckb-check"></span> <label for="blue-ckb-1">會員</label></div>
-			<div class="oa-jelly-checkbox green-ckb"><input type="checkbox" id="green-ckb-1" value="商城" checked><span class="ckb-check"></span> <label for="green-ckb-1">商城</label></div>
-			<div class="oa-jelly-checkbox yellow-ckb"><input type="checkbox" id="yellow-ckb-1" value="金流" checked><span class="ckb-check"></span> <label for="yellow-ckb-1">金流</label></div>
-			<div class="oa-jelly-checkbox cyan-ckb"><input type="checkbox" id="cyan-ckb-1" value="系統" checked><span class="ckb-check"></span> <label for="cyan-ckb-1">系統</label></div>
-			<div class="oa-jelly-checkbox orange-ckb"><input type="checkbox" id="orange-ckb-1" value="手機" checked><span class="ckb-check"></span> <label for="orange-ckb-1">手機</label></div>
-			<div class="oa-jelly-checkbox red-ckb"><input type="checkbox" id="red-ckb-1" value="管理後台" checked><span class="ckb-check"></span> <label for="red-ckb-1">管理後台</label></div>
-			<div class="oa-jelly-checkbox purple-ckb"><input type="checkbox" id="purple-ckb-1" value="活動網站" checked><span class="ckb-check"></span> <label for="purple-ckb-1">活動網站</label></div>
-			<div class="oa-jelly-checkbox pure-ckb"><input type="checkbox" id="pure-ckb-1" value="形象網站" checked><span class="ckb-check"></span> <label for="pure-ckb-1">形象網站</label></div>	
+			<div class="oa-jelly-checkbox blue-ckb"><input type="checkbox" id="blue-ckb-1" value="會員" checked data-container="body" data-toggle="popover" data-placement="top" data-content="checked more than one"><span class="ckb-check"></span> <label for="blue-ckb-1"><span class="name_tw">會員</span><span class="name_en">Member</span></label></div>
+			<div class="oa-jelly-checkbox green-ckb"><input type="checkbox" id="green-ckb-1" value="商城" checked><span class="ckb-check"></span> <label for="green-ckb-1"><span class="name_tw">商城</span><span class="name_en">Shop</span></label></div>
+			<div class="oa-jelly-checkbox yellow-ckb"><input type="checkbox" id="yellow-ckb-1" value="金流" checked><span class="ckb-check"></span> <label for="yellow-ckb-1"><span class="name_tw">金流</span><span class="name_en">Cash</span></label></div>
+			<div class="oa-jelly-checkbox cyan-ckb"><input type="checkbox" id="cyan-ckb-1" value="系統" checked><span class="ckb-check"></span> <label for="cyan-ckb-1"><span class="name_tw">系統</span><span class="name_en">System</span></label></div>
+			<div class="oa-jelly-checkbox orange-ckb"><input type="checkbox" id="orange-ckb-1" value="手機" checked><span class="ckb-check"></span> <label for="orange-ckb-1"><span class="name_tw">手機</span><span class="name_en">Mobile</span></label></div>
+			<div class="oa-jelly-checkbox red-ckb"><input type="checkbox" id="red-ckb-1" value="管理後台" checked><span class="ckb-check"></span> <label for="red-ckb-1"><span class="name_tw">管理後台</span><span class="name_en">Back-End</span></label></div>
+			<div class="oa-jelly-checkbox purple-ckb"><input type="checkbox" id="purple-ckb-1" value="活動網站" checked><span class="ckb-check"></span> <label for="purple-ckb-1"><span class="name_tw">活動網站</span><span class="name_en">Campaign</span></label></div>
+			<div class="oa-jelly-checkbox white-ckb"><input type="checkbox" id="white-ckb-1" value="形象網站" checked><span class="ckb-check"></span> <label for="white-ckb-1"><span class="name_tw">形象網站</span><span class="name_en">Imagin</span></label></div>	
 		</div>
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">作品展示
+                <h1 class="page-header">
+					<span class="name_tw">作品展示</span>
+					<span class="name_en">Portfolio</span>
                     <!--<small>Secondary Text</small>-->
                 </h1>
             </div>
@@ -260,34 +262,44 @@
 	<script src="./css/countdown/countdown.js" language="javascript" type="text/javascript" /></script>
 	
     <script>
+	var lang = "tw";
     $(document).ready(function(){
+	
 			$('.oa-select').OAjellyDropdown ({ width: '160px'}).click (function () { 
 				$(this).siblings().addClass ('dpd-closed'); 
 			});
-            readWebData.initialize(["會員","商城","金流","管理後台","形象網站","系統","活動網站","手機"]);
-			countDownHandle.initialize();
+            readWebData.initialize(["會員","商城","金流","管理後台","形象網站","系統","活動網站","手機"],lang);
+			countDownHandle.initialize();//計時器
 			
 			$("body").delegate(".switch-lang ul li","click",function(){
 				switch(parseInt($(".switch-lang > input").val())){
-					case 1:
-						$(".name_tw").hide();
-						$(".name_en").show();
+					case 1: // EN
+						lang = "en";
 					break;
-					case 2:
-						$(".name_tw").show();
-						$(".name_en").hide();
+					case 2: //TW
+						lang = "tw";
 					break;
 				}
+				readWebData.switchLang(lang);
 			})
 			
+			//checkbox 過濾
 			$("body").delegate("input[type=checkbox]","click",function(){
-                            
 				var ck = [];
+				//驗證是否剩下一個
+				if($("input[type=checkbox]:checked").length == 0){
+					$(this).prop("checked",true);
+					$('[data-toggle=popover]').popover('show');
+					$(".popover").css({"left":$(this).offset().left-$(".container").eq(0).offset().left+6.5})
+					return;
+				}else if($("input[type=checkbox]:checked").length > 1){
+					$('[data-toggle=popover]').popover('hide');
+				}
+				
 				$("input[type=checkbox]:checked").each(function(){
 					ck.push($(this).val());
 				})
-				readWebData.initialize(ck)
-				
+				readWebData.initialize(ck,lang)
 			})
 			
     })

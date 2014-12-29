@@ -98,8 +98,8 @@ readWebData = (function(){
 									case "手機":
 										_t = '<span class="label label-fmmobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> <span class="name_tw">手機</span><span class="name_en">Mobile</span></span>';
 									break;
-									case "連結已移除":
-										_t = '<span class="glyphicon glyphicon glyphicon-link" aria-hidden="true" style="color:#f00"><span class="name_tw">連結已移除</span><span class="name_en">unlink</span></span>';
+									case "連結移除":
+										_t = '<span class="glyphicon glyphicon glyphicon-link" aria-hidden="true" style="color:#f00"><span class="name_tw">連結移除</span><span class="name_en">unlink</span></span>';
 									break;
 									default:
 										_t = "標籤為定義";

@@ -118,6 +118,7 @@ var countDownHandle;
 						
 					}
 					var _dateDiff = function(date1,date2){
+						console.log(date1,date2);
 						var type1 = typeof date1, type2 = typeof date2; 
 						if(type1 == 'string') 
 						date1 = _stringToTime(date1); 

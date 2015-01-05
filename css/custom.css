@@ -1,0 +1,43 @@
+ body{
+	cursor:url(pointer.cur),auto
+}
+ img.img-responsive{
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	-moz-transform:scale(1);
+	-webkit-transform:scale(1);
+	-o-transform:scale(1);
+	-ms-transform:scale(1);
+	transform:scale(1);
+}
+img.img-responsive:hover{
+	-webkit-transition-duration: 0.8s;
+	transition-duration: 0.8s;
+	-moz-transform:scale(1.2);
+	-webkit-transform:scale(1.2);
+	-o-transform:scale(1.2);
+	-ms-transform:scale(1.2);
+	transform:scale(1.2);
+}
+.img-overlay{
+	overflow:hidden;
+}
+.oa-select ul{
+	margin-top:-5px;
+}
+.3dtext{
+	font-family: Garamond, serif;
+	line-height: 1em;
+	color: #ff8f05;
+	font-weight:bold;
+	font-style:italic;
+	font-size: 54px;
+	text-shadow:0px 0px 0 rgb(185,73,-65),1px 1px 0 rgb(169,57,-81),2px 2px 0 rgb(153,41,-97),3px 3px 0 rgb(137,25,-113),4px 4px 0 rgb(121,9,-129),5px 5px 0 rgb(105,-7,-145), 6px 6px 0 rgb(89,-23,-161),7px 7px 6px rgba(0,0,0,0.3),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+}
+.name_en{
+	display:none;
+}
+a:hover,input[type=checkbox]:hover,input[type=checkbox]~label>span[class=name_tw]:hover,input[type=checkbox]~label>span[class=name_en]:hover,.dpd-title:hover,.dpd-title~ul li:hover{
+	cursor:url(click.cur),auto
+}
+		

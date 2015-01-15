@@ -1,5 +1,7 @@
 {
     "data":[
+			{"name_tw":"大塚製藥CRM","name_en":"Otsuka CRM","url":"http://ss2.otsuka.com.tw/ss3/","image":"images/addImage2/ss2.jpg","type":["管理後台"]},
+			{"name_tw":"鑽贏雲端購物","name_en":"Jwin Cloud Shop","url":"http://www.jowinwin.com/hertv2msd/index.php?r=site/rack","image":"images/addImage2/jowin2tv.jpg","type":["會員","商城","金流","管理後台"]},
             {"name_tw":"媽媽寶寶","name_en":"Mombaby","url":"http://www.mombaby.com.tw","image":"images/handle02/mombaby.jpg","type":["會員","商城","金流","管理後台"]},
             {"name_tw":"愛星網","name_en":"imSTAR","url":"https://www.imstar.com.tw","image":"images/handle02/imstar.jpg","type":["會員","管理後台"]},
             {"name_tw":"卡培爾手套","name_en":"Capire Gloves","url":"https://www.capireglove.com","image":"images/handle02/capire.jpg","type":["會員","商城","金流","管理後台"]},

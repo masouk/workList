@@ -8,7 +8,7 @@ readWebData = (function(){
 	var $ = window.jQuery;
 	var _list = function(condition,lang){
 		$.ajax({
-			url:"data2.json",
+			url:"data.json",
 			dataType:"json",
 			cache:true,
 			timeout:1000*10,

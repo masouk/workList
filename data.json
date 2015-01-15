@@ -1,5 +1,6 @@
 {
     "data":[
+			{"name_tw":"鑽贏經銷系統","name_en":"Jowin Sales Sysytem","url":"http://www.jowinwin.com/sales/","image":"images/addImage2/jowin_sales.jpg","type":["系統"]},
 			{"name_tw":"MombabyAPP","name_en":"MombabyAPP","url":"images/addImage/mombabyapp.jpg","image":"images/addImage/mombabyapp.jpg","type":["手機"]},
 			{"name_tw":"大塚製藥CRM","name_en":"Otsuka CRM","url":"http://ss2.otsuka.com.tw/ss3/","image":"images/addImage2/ss2.jpg","type":["系統"]},
 			{"name_tw":"鑽贏雲端購物","name_en":"Jwin Cloud Shop","url":"http://www.jowinwin.com/hertv2msd/index.php?r=site/rack","image":"images/addImage2/jowin2tv.jpg","type":["會員","商城","金流","管理後台"]},

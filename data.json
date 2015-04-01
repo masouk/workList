@@ -1,6 +1,6 @@
 {
     "data":[
-	    {"name_tw":"MombabyAPP","name_en":"MombabyAPP","url":"images/addImage/mombabyapp.jpg","image":"images/addImage/mombabyapp.jpg","type":["手機"]},
+	    {"name_tw":"APP","name_en":"APP","url":"images/addImage/mombabyapp.jpg","image":"images/addImage/mombabyapp.jpg","type":["手機"]},
 	    {"name_tw":"大塚製藥CRM","name_en":"Otsuka CRM","url":"http://ss2.otsuka.com.tw/ss3/","image":"images/addImage2/ss2.jpg","type":["系統"]},
             {"name_tw":"媽媽寶寶","name_en":"Mombaby","url":"http://www.mombaby.com.tw","image":"images/handle02/mombaby.jpg","type":["會員","商城","金流","管理後台"]},
             {"name_tw":"愛星網","name_en":"imSTAR","url":"https://www.imstar.com.tw","image":"images/handle02/imstar.jpg","type":["會員","管理後台"]},

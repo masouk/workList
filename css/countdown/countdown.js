@@ -147,7 +147,7 @@ var countDownHandle;
 	var _refreshTime = function(){
 		var Today=new Date();
 		var nowTime = Today.getFullYear()+"-"+(Today.getMonth()+1)+"-"+Today.getDate()+" "+Today.getHours()+":"+Today.getMinutes()+":"+Today.getSeconds();
-		var dif = _dateDiff("2016-07-01 10:00:00",nowTime) 
+		var dif = _dateDiff("2016-09-01 10:00:00",nowTime) 
 		var day = Math.floor(dif/(24*60*60));
 		var hour = Math.floor((dif%(24*60*60))/(60*60));
 		var min = Math.floor(((dif%(24*60*60))%(60*60))/60);
